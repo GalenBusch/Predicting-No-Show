@@ -9,7 +9,9 @@ Consider this a template and a starting point for designing your own model. I di
 ### Prerequisites
 
 Numpy
+
 SQLalchemy
+
 Scipy
 
 ### Installing
