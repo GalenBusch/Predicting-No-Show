@@ -26,8 +26,10 @@ In production, I selected RandomForestClassifier as it returns the highest P-val
 
 ## Built With
 
-Python,
-Conda,
+Python
+
+Conda
+
 Jupyter Notebook
 
 ## Authors
