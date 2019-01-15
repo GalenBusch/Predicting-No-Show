@@ -6,6 +6,10 @@ When patients don't show up for their appointments, in capacity constrained clin
 
 Consider this a template and a starting point for designing your own model. I did my own feature engineering represented in SQL, which required a combination of clinical process knowledge as well as automated appointment exclusion. Your features may vary, and you will need to adjust the one-hot encoding for your own project.
 
+## Feature Engineering
+
+When clinical processes may vary from one team, unit, service line, or floor to another, building in logic to programatically eliminate certain appointments was crucial and led to a 9% increase in AUC. I do this by building an exclusionary temp table containing all appointment types by categorical division, and excluding appointment types per division with a completion rate below 20%. Many features used are created by correlated subquery. While the table scans of the correlated subqueries were processing intensive, runtime paled in comparison to the models referenced. 
+
 ### Prerequisites
 
 Numpy
@@ -13,6 +17,9 @@ Numpy
 SQLalchemy
 
 Scipy
+
+SKLearn
+
 
 ### Installing
 
